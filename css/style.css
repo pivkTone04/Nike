@@ -166,6 +166,12 @@ body{
 	
 	}
 	
+	svg{
+		position:absolute;
+		left: 52px;
+		bottom: -122px;
+	}
+
 
 /*--------------------------------------------------------------*/
 .description{
