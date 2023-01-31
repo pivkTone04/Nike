@@ -37,13 +37,31 @@
 				</div>
 				<div class="description" id="description-color">
 					<div class="main-carousel" >
-						<div class="carousel-cell"> <img src="shoes/WhiteShoes.png" alt="whitshoes" onclick="belaBarva('description-color')" > </div>
-						<div class="carousel-cell"> <img src="shoes/BlackShoes.png" alt="whitshoes" onclick="svetloModraBarva('description-color')"> </div>
-						<div class="carousel-cell"> <img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')"> </div>
+						<div class="carousel-cell"> <img src="shoes/WhiteShoes.png" alt="whitshoes" onclick="belaBarva('description-color')" class="shoes" > <img src="stuff/Nike.png" class="pngPicture"> </div>
+						<div class="carousel-cell"> <img src="shoes/BlackShoes.png" alt="whitshoes" onclick="svetloModraBarva('description-color')" class="shoes"> </div>
+						<div id="beziere" class="carousel-cell"> <img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')" class="shoes"> 
+							<script>
+									var c = document.getElementById("beziere");
+									var ctx = c.getContext("2d");
+									ctx.beginPath();
+									ctx.moveTo(110, 44);
+									ctx.bezierCurveTo(5, 270, 220, 175, 630, 50);
+									ctx.bezierCurveTo(450, 135, -216, 462, 104, 50);
+									ctx.closePath();
+									ctx.fillStyle = "#0000ff";
+									ctx.fill();
+									ctx.stroke();
+							</script>
+						
+						
+						</div>
 						
 						
 					</div>
 				<div>
+					
+				</div>
+				</div>
 			</div>
 		</div>
 	</body>
