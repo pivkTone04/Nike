@@ -146,28 +146,38 @@ body{
 		line-height: 200px;
 		position: relative;
 		
+		
 	}
 	
 	
 	img.shoes{
 		box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 		border-radius: 8px;
-		position: relative;
+		position: relative;	
 	}
 		
-	img.pngPicture{
-		position: absolute;
-		
-		right: 163px;
-		top: 170px;
-	}
-	
 	.carousel-cell.is-selected {
 	
 	}
 	
-	.2d{
-		background-color: blue;
+	.centerIt{
+		display: flex;
+		justify-content: center
+	}
+	
+	.twoPNG{
+		position: absolute;	
+	}
+	
+	#pngnike{
+		margin-left: 140px;
+		margin-top: 170px;
+	}
+	
+	#svgEdit{
+		margin-left: 275px;
+		margin-top: 147px;
+		opacity: 100%;
 	}
 /*--------------------------------------------------------------*/
 .description{
@@ -189,34 +199,7 @@ body{
 	background-color: #365486;
 }
 
-@media only screen and (max-width: 2405px){
-	img.pngPicture{
-		right: 243px;
-	}
-}
-@media only screen and (max-width: 2135px){
-	img.pngPicture{
-		right: 197px;
-	}
-}
 
-@media only screen and (max-width: 1925px){
-	img.pngPicture{
-		right: 163px;
-	}
-}
-
-@media only screen and (max-width: 1750px){
-	img.pngPicture{
-		right: 134px;
-	}
-}
-
-@media only screen and (max-width: 1550px){
-	img.pngPicture{
-		right: 100px;
-	}
-}
 
 @media only screen and (max-width: 1500px){
 	.carousel-cell{	
@@ -228,20 +211,4 @@ body{
 	}
 }
 
-@media only screen and (max-width: 1100px){
-	img.pngPicture{
-		left: 530px;
-	}
-}
-@media only screen and (max-width: 970px){
-	img.pngPicture{
-		left: 463px;
-	}
-}
-
-@media only screen and (max-width: 770px){
-	img.pngPicture{
-		left: 368px;
-	}
-}
 
