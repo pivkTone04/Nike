@@ -27,7 +27,7 @@ function belaBarva(x){
 	
 	//classList.remove('spremeniBarvoTemnoModra');
 	document.getElementById(x).classList.toggle("spremeniBarvoBelo");
-	classList.remove('spremeniBarvoSvetloModro');
+
 }
 function svetloModraBarva(x){
 	//classList.remove('spremeniBarvoTemnoModra');
@@ -46,20 +46,65 @@ var ctx = c.getContext("2d");
 
 
 drawShape(ctx, 1, -200);
+
 function drawShape(ctx, xoff, yoff) {
-	  ctx.beginPath();
-	  ctx.moveTo(348 + xoff, 373 + yoff);
-	  ctx.bezierCurveTo(337 + xoff, 374 + yoff, 317 + xoff, 389 + yoff, 312 + xoff, 395 + yoff);
-	  ctx.bezierCurveTo(302 + xoff, 407 + yoff, 299 + xoff, 414 + yoff, 298 + xoff, 421 + yoff);
-	  ctx.bezierCurveTo(296 + xoff, 436 + yoff, 302 + xoff, 452 + yoff, 331 + xoff, 454 + yoff);
-	  ctx.bezierCurveTo(351 + xoff, 455 + yoff, 425 + xoff, 439 + yoff, 438 + xoff, 434 + yoff);
-	  ctx.bezierCurveTo(446 + xoff, 431 + yoff, 530 + xoff, 404 + yoff, 536 + xoff, 401 + yoff);
-	  ctx.bezierCurveTo(551 + xoff, 394 + yoff, 525 + xoff, 386 + yoff, 514 + xoff, 390 + yoff);
-	  ctx.bezierCurveTo(493 + xoff, 397 + yoff, 442 + xoff, 411 + yoff, 438 + xoff, 412 + yoff);
-	  ctx.bezierCurveTo(419 + xoff, 417 + yoff, 379 + xoff, 421 + yoff, 363 + xoff, 420 + yoff);
-	  ctx.bezierCurveTo(326 + xoff, 417 + yoff, 346 + xoff, 372 + yoff, 349 + xoff, 373 + yoff);
-	  ctx.stroke();
+  
+  ctx.moveTo(361 + xoff, 418 + yoff);
+  ctx.bezierCurveTo(357 + xoff, 430 + yoff, 358 + xoff, 452 + yoff, 371 + xoff, 457 + yoff);
+  ctx.bezierCurveTo(384 + xoff, 464 + yoff, 435 + xoff, 446 + yoff, 449 + xoff, 442 + yoff);
+  ctx.bezierCurveTo(467 + xoff, 436 + yoff, 498 + xoff, 427 + yoff, 524 + xoff, 417 + yoff);
+  ctx.bezierCurveTo(539 + xoff, 412 + yoff, 559 + xoff, 403 + yoff, 572 + xoff, 399 + yoff);
+  ctx.bezierCurveTo(575 + xoff, 399 + yoff, 573 + xoff, 412 + yoff, 573 + xoff, 411 + yoff);
+  ctx.bezierCurveTo(557 + xoff, 417 + yoff, 520 + xoff, 434 + yoff, 503 + xoff, 440 + yoff);
+  ctx.bezierCurveTo(481 + xoff, 450 + yoff, 436 + xoff, 471 + yoff, 403 + xoff, 479 + yoff);
+  ctx.bezierCurveTo(385 + xoff, 485 + yoff, 339 + xoff, 501 + yoff, 326 + xoff, 475 + yoff);
+  ctx.bezierCurveTo(324 + xoff, 471 + yoff, 321 + xoff, 447 + yoff, 338 + xoff, 436 + yoff);
+  ctx.bezierCurveTo(335 + xoff, 435 + yoff, 360 + xoff, 417 + yoff, 361 + xoff, 417 + yoff);
+  ctx.stroke();
+
+
 	  ctx.fillStyle= "black";
 	  ctx.fill();
 }
+
+
+function odpriBelo(x){
+	document.getElementById('main').classList.remove("blackBackground")
+	document.getElementById('togetherAsTwo').classList.remove("whiteSequel3")
+	document.getElementById(x).classList.toggle("whiteSequel1");
+	
+	document.getElementById('main').classList.toggle("whiteBackground")
+}
+
+function odpriCrno(x){
+	document.getElementById('main').classList.remove("whiteBackground")
+	document.getElementById('togetherAsOne').classList.remove("whiteSequel1")
+	document.getElementById(x).classList.toggle("whiteSequel3");
+	
+	document.getElementById('main').classList.toggle("blackBackground")
+}
+
+function sweetAlert(){
+	Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'We are out of stock!',
+  showConfirmButton: false,
+  timer: 1500
+  
+})
+}
+
+
+function alert2(){
+	Swal.fire({
+  icon: 'error',
+  title: 'Error',
+  text: 'Info is currently unavailable',
+  showConfirmButton: false,
+  timer: 1500
+  
+})
+}
+
 

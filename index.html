@@ -10,23 +10,24 @@
 		<link rel="stylesheet" href="css/flickity.css" />
 	
 		<script src="js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</head>
 	<body>
 		<div id="main"> <!-- glavni div-->
 			<div id="tab"> <!-- tab bar-->
-				<div class="inTab logoNike-class" id="logoNike"></div>
+				<div class="inTab logoNike-class" id="logoNike"> <img src="icons/nike.png" alt="search" id="searchImage2"> </div>
 				<div class="inTab selection-class" id="selection">
-						<div class="selection-pick">New & Featured</div>
-						<div class="selection-pick">Shop</div>
-						<div class="selection-pick">Men</div>
-						<div class="selection-pick">Women</div>
-						<div class="selection-pick">Kids</div>
+						
+						<div class="selection-pick" onclick="window.open('https://www.nike.com/si/')">Shop</div>
+						<div class="selection-pick" onclick="odpriBelo('togetherAsOne')">PNG</div>
+						<div class="selection-pick" onclick="odpriCrno('togetherAsTwo')">SVG</div>
+						<div class="selection-pick" onclick="alert2()">Bezier</div>
 				</div>
 				<div class="inTab search-class" id="search">
 					<input type="text" name="search" placeholder="Search" onclick="searchBarChoseOnce('search')"> 
 					<button id="searchImage" class="search-img" onclick="searchBarChose('search')"></button>
 					
-					<!-- <img src="icons/search.png" alt="search" id="searchImage"> -->
+					
 				</div>
 			</div>
 			<div id="source"> <!-- bodyPart -->
@@ -38,45 +39,141 @@
 				<div class="description" id="description-color">
 					<div class="main-carousel" >
 						<div class="carousel-cell"> 
-							<div class="centerIt">	
-								<div class="twoPNG">
-									<img src="shoes/WhiteShoes.png" alt="whitshoes" onclick="belaBarva('description-color')" class="shoes" > 
-								</div>
-								<div class="twoPNG" id="pngnike">
-									<img src="stuff/Nike.png" class="pngPicture"> 
+							<div class="centerIt">
+								<div class="hoverIt">
+									<button class="iconsBasket" onclick="sweetAlert()"></button>
+									<button class="iconsInfo" onclick="odpriBelo('togetherAsOne')"></button>
+								
+									<div class="overlayIt" onclick="sweetAlert()">
+						
+						
+										<div class="twoPNG" id="hoverPNG">
+											<img src="shoes/WhiteShoes.png" alt="whitshoes" class="shoes" > <!--onclick="belaBarva('description-color')"-->
+										</div>
+										<div class="twoPNG" id="pngnike">
+											<img src="shoes/nike.png" class="pngPicture"> 
+										</div>
+										
+										
+									</div>	
 								</div>
 							</div>
+							
 						</div>
 						<div class="carousel-cell">
 							<div class="centerIt">
-								<div class="twoPNG">
-									<img src="shoes/BlackShoes.png" alt="whitshoes" onclick="svetloModraBarva('description-color')" class="shoes"> 
-								</div>
-								<div class="twoPNG" id="svgEdit">
-									
+								<div class="hoverIt">
+									<input type="button" class="iconsBasket" value="" onclick="window.open('https://www.nike.com/si/t/air-force-1-07-shoes-kjdpDX/FB3360-100')" />
+									<button class="iconsInfo" onclick="odpriCrno('togetherAsTwo')"></button>
+										<div class="overlayIt">
+											<div class="twoPNG">
+												<img src="shoes/BlackShoes.png" alt="whitshoes" class="shoes"> <!--onclick="svetloModraBarva('description-color')"-->
+											</div>
+											<div class="twoPNG" id="svgEdit">
+												<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+													width="300" height="200" viewBox="0 0 195.000000 163.000000"
+													preserveAspectRatio="xMidYMid meet">
+
+													<g transform="translate(-200.000000,-150.000000) scale(0.60000,0.60000)"
+													fill="#000000" stroke="none">
+													<path d="M 346 376 C 322 432 388 419 396 418 C 419 415 436 411 448 408 C 466 403 483 399 498 395 C 508 392 515 389 523 388 C 533 388 549 393 543 397 C 530 402 509 412 494 416 C 475 424 455 430 430 437 C 418 440 380 449 363 450 C 298 460 300 428 299 420 C 305 392 330 382 346 376 Z">
+													</g>
+												</svg>
+											</div>
+										</div>	
 								</div>
 							</div>
 						</div>
 								<div id="beziere" class="carousel-cell"> 
 									<div class="centerIt">			
-										<div class="twoPNG">
-											<img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')" class="shoes"> 
-										</div>
-		
-										<div class="twoPNG" id="canvasPoravnava">
-											<canvas id="myCanvas" width="600px" height="400px" onclick="drawShape()">
+										<div class="hoverIt">
+											<button class="iconsBasket" onclick="sweetAlert()"></button>
+											<button class="iconsInfo" onclick="alert2()"></button>
+												<div class="overlayIt">
+										
+													<div class="twoPNG">
+														<img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')" class="shoes"> 
+													</div>
+					
+													<div class="twoPNG" id="canvasPoravnava">
+														<canvas id="myCanvas" width="600px" height="400px" onclick="drawShape()">
+													</div>
+												</div>
 										</div>
 									</div>	
 								</div>		
 								
 						</div>
-						
 					</div>
 				<div>
 					
 				</div>
 				</div>
-			</div>
+				<div class="whiteSequel" id="togetherAsOne">
+					<div class="infoShoes">
+						<div class="right"><img src="Shoes/White/White0.webp"></div>
+						<div class="left"><img src="Shoes/White/White1.webp"></div>
+						<div class="right"> <img src="Shoes/White/White2.webp"></div>
+						<div class="left"><img src="Shoes/White/White3.webp"></div>
+						<div class="right"><img src="Shoes/White/White4.webp"></div>
+						<div class="left"><img src="Shoes/White/White5.webp"></div>	
+					</div>
+					
+					<div class="descriptionShoes">
+						<div class="fontSettings">
+							
+							<p>LEGENDARY COMFORT.</p>
+							<p>Kick it in comfort in the Nike Air Force 1.The feel of classic leather and details that made this shoe an icon are sure to make your sneaker style stand out on the street.</p>
+							<p></p>
+							<p>Benefits
+								<ul>
+									<li>Real and synthetic leather are durable and easy to clean.</li>
+									<li>An Air-Sole unit gives you lightweight cushioning.</li>
+									<li>Rubber sole gives you durable traction.</li>
+									<li>Colour Shown: White/Black</li>
+									<li>Style: CT3839-100</li>
+								</ul>
+							
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="whiteSequel2" id="togetherAsTwo">
+					<div class="infoShoes">
+						<div class="right"><img src="Shoes/Black/Black0.webp"></div>
+						<div class="left"><img src="Shoes/Black/Black1.webp"></div>
+						<div class="right"> <img src="Shoes/Black/Black2.webp"></div>
+						<div class="left"><img src="Shoes/Black/Black3.webp"></div>
+						<div class="right"><img src="Shoes/Black/Black4.webp"></div>
+						<div class="left"><img src="Shoes/Black/Black5.webp"></div>	
+					</div>
+					
+					<div class="descriptionShoes">
+						<div class="fontSettings">
+							
+							
+							<p>The radiance lives on in the Nike Air Force 1 '07. Crossing hardwood comfort with off-court flair, this b-ball original puts a fresh 
+							spin on everything you know best about the AF-1: legendary comfort, era-echoing '80s construction and nothing-but-net style. Durable leather overlays are 
+							paired with reflective-design details and a pop of blue for the perfect amount of flash to make you shine. </p>
+							
+							<p></p>
+							<p>Benefits
+								<ul>
+									<li>From tough stitching to pristine leather to the cupsole design, these kicks deliver durable style that's smoother than backboard glass.</li>
+									<li>Originally designed for performance hoops, Nike Air cushioning delivers lasting comfort.</li>
+									<li>Low-cut, padded collar looks sleek and feels great.</li>
+									<li>Rubber outsole with heritage hoops pivot circles adds traction and durability.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			
 		</div>
 	</body>
 
@@ -90,7 +187,8 @@
   // options
 
  
-	wrapAround: true
+	wrapAround: true,
+	
 	
 });
 </script>
