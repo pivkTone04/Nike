@@ -179,6 +179,14 @@ body{
 		margin-top: 147px;
 		opacity: 100%;
 	}
+	#myCanvas {
+    width: 290px;
+}
+	#canvasPoravnava{
+		margin-top: 160px;
+		margin-left: 50px;
+		transform: scale(200%);
+	}
 /*--------------------------------------------------------------*/
 .description{
 	padding-top: 40px;

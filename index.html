@@ -57,23 +57,19 @@
 								</div>
 							</div>
 						</div>
-						<div id="beziere" class="carousel-cell"> <img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')" class="shoes"> 
-							<script>
-									var c = document.getElementById("beziere");
-									var ctx = c.getContext("2d");
-									ctx.beginPath();
-									ctx.moveTo(110, 44);
-									ctx.bezierCurveTo(5, 270, 220, 175, 630, 50);
-									ctx.bezierCurveTo(450, 135, -216, 462, 104, 50);
-									ctx.closePath();
-									ctx.fillStyle = "#0000ff";
-									ctx.fill();
-									ctx.stroke();
-							</script>
-						
-						
+								<div id="beziere" class="carousel-cell"> 
+									<div class="centerIt">			
+										<div class="twoPNG">
+											<img src="shoes/BlueShoes.png" alt="whitshoes" onclick="temnoModraBarva('description-color')" class="shoes"> 
+										</div>
+		
+										<div class="twoPNG" id="canvasPoravnava">
+											<canvas id="myCanvas" width="600px" height="400px" onclick="drawShape()">
+										</div>
+									</div>	
+								</div>		
+								
 						</div>
-						
 						
 					</div>
 				<div>
