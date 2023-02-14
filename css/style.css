@@ -3,7 +3,7 @@ body{
 	margin: 0;
 	padding: 0;
 	
-	font-family: 'Bahnschrift Light';
+	font-family:'Bahnschrift Light';
 	background-color: ;
 	
 }
@@ -321,8 +321,8 @@ body{
 }
 
 .infoShoes img{
-	width: 260px;
-	height: 300px;
+	width: 200px;
+	height: 240px;
 	
 }
 
@@ -410,5 +410,7 @@ body{
 	box-sizing: border-box; 
 }
 }
+
+
 
 
